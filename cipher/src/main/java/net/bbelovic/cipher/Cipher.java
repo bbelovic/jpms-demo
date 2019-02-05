@@ -1,4 +1,4 @@
-package net.bbelovic.jpms.cipher;
+package net.bbelovic.cipher;
 
 public interface Cipher {
     String encrypt(String input);

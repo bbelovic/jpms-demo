@@ -1,2 +1,4 @@
-rootProject.name = 'cipher'
+rootProject.name = 'cipher-main'
+include 'cipher'
+include 'cipher-cli'
 
