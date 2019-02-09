@@ -5,7 +5,7 @@ import net.bbelovic.cipher.Cipher;
 import java.util.function.IntUnaryOperator;
 import java.util.stream.Collectors;
 
-final class CaesarCipher implements Cipher {
+public final class CaesarCipher implements Cipher {
     @Override
     public String encrypt(String input) {
         IntUnaryOperator encryptionFunction = (int c) -> ((c - 65 + 3) % 26) + 65;
