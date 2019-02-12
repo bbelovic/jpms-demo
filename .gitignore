@@ -1,6 +1,7 @@
 cipher/target
-cipher-cli/target
+cipher.cli/target
 gradle/
+classes/
 mods
 .gradle/
 .idea/
