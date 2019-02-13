@@ -5,3 +5,4 @@ rm -rf mods/*
 
 jar --create --file mods/cipher.cli.jar --main-class net.bbelovic.cipher.cli.Main -C classes/cipher.cli .
 jar --create --file mods/cipher.jar -C classes/cipher .
+jar --create --file mods/cipher.standalone.jar -C classes/cipher.standalone .
