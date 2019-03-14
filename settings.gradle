@@ -2,4 +2,5 @@ rootProject.name = 'cipher-main'
 include 'cipher'
 include 'cipher-cli'
 include 'cipher-standalone'
+include 'dep1'
 
