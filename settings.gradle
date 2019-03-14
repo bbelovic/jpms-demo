@@ -3,4 +3,5 @@ include 'cipher'
 include 'cipher-cli'
 include 'cipher-standalone'
 include 'dep1'
+include 'dep2'
 
