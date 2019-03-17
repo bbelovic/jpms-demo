@@ -1,6 +1,7 @@
 package net.bbelovic.cipher.cli;
 
 import net.bbelovic.cipher.MorseCode;
+import net.bbelovic.dependency.one.*;
 
 import java.lang.reflect.Constructor;
 
@@ -14,5 +15,6 @@ public class Main {
         Object instance = constructor.newInstance();
         MorseCode morseCode = new MorseCode();
         System.out.println("Morse code instantiated");
+        HelperDependencyOne one = new HelperDependencyOne();
     }
 }
