@@ -2,6 +2,7 @@ cipher/target
 cipher.cli/target
 gradle/
 classes/
+classes-9/
 mods
 .gradle/
 .idea/
