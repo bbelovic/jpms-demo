@@ -1,3 +1,4 @@
 module cipher.dep1 {
-    uses net.bbelovic.dependency.one.SimpleService;
+    requires cipher.services.main;
+    uses net.bbelovic.services.SimpleService;
 }
