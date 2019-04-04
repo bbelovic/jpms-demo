@@ -12,6 +12,7 @@ public class Main {
                 .stream()
                 .map(ServiceLoader.Provider::get)
                 .collect(Collectors.toList());
-        System.out.println(services.size());
+        System.out.println("Found services: "+ services.size());
+        services.get(0).execute();
     }
 }
