@@ -5,4 +5,5 @@ include 'cipher-standalone'
 include 'dep1'
 include 'dep2'
 include 'services'
+include 'dep3'
 
