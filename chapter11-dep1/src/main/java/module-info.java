@@ -1,0 +1,3 @@
+module exposing {
+    requires exposed;
+}
