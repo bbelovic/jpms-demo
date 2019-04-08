@@ -6,4 +6,5 @@ include 'dep1'
 include 'dep2'
 include 'services'
 include 'dep3'
+include 'chapter11-dep1'
 
