@@ -1,3 +1,4 @@
 module another.exposing {
-    requires exposed;
+    requires transitive exposed;
+    exports net.bbelovic.another.types;
 }
