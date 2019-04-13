@@ -1,4 +1,3 @@
 module depending {
-    requires exposing;
-    requires another.exposing;
+    requires aggregator;
 }
