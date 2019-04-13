@@ -15,3 +15,8 @@ cd ..
 javac -p mods/ -d classes $(find chapter11-dep3/src/main/java -name '*.java')
 cd classes
 jar --create --file ../mods/chapter11-dep3.jar $(find . -path "*/another/*") ./module-info.class
+
+cd ..
+javac -p mods/ -d classes $(find ch11-aggregator/src/main/java -name '*.java')
+cd classes
+jar --create --file ../mods/chapter11-aggregator.jar ./module-info.class
