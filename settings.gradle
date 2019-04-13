@@ -9,4 +9,5 @@ include 'dep3'
 include 'chapter11-dep1'
 include 'chapter11-dep2'
 include 'chapter11-depending'
+include 'chapter11-dep3'
 
