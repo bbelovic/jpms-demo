@@ -12,4 +12,5 @@ include 'chapter11-depending'
 include 'chapter11-dep3'
 include 'ch11-aggregator'
 include 'chapter11-optional'
+include 'chapter11-dep4'
 
