@@ -13,4 +13,5 @@ include 'chapter11-dep3'
 include 'ch11-aggregator'
 include 'chapter11-optional'
 include 'chapter11-dep4'
+include 'chapter11-dep5'
 
