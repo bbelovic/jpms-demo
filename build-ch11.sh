@@ -25,3 +25,13 @@ cd ..
 javac -d classes $(find chapter11-optional/src/main/java -name '*.java')
 cd classes
 jar --create --file ../mods/chapter11-optional.jar $(find . -path "*/optional/*") ./module-info.class
+
+cd ..
+javac -d classes $(find chapter11-dep4/src/main/java -name '*.java')
+cd classes
+jar --create --file ../mods/chapter11-dep4.jar $(find . -path "*/dep4/*") ./module-info.class
+
+cd ..
+javac -p mods/ -d classes $(find chapter11-dep5/src/main/java -name '*.java')
+cd classes
+jar --create --file ../mods/chapter11-dep5.jar $(find . -path "*/dep5/*") ./module-info.class
