@@ -35,3 +35,8 @@ cd ..
 javac -p mods/ -d classes $(find chapter11-dep5/src/main/java -name '*.java')
 cd classes
 jar --create --file ../mods/chapter11-dep5.jar $(find . -path "*/dep5/*") ./module-info.class
+
+cd ..
+javac -p mods/ -d classes $(find chapter11-dep6/src/main/java -name '*.java')
+cd classes
+jar --create --file ../mods/chapter11-dep6.jar $(find . -path "*/dep6/*") ./module-info.class
