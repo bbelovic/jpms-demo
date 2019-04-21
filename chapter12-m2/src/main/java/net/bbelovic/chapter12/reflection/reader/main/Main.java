@@ -6,13 +6,12 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Main {
     public static void main(String[] args) {
-        ExportedClass exportedClass = new ExportedClass();
         try {
-            var constructor = exportedClass.getClass().getConstructor();
+            var constructor = ExportedClass.class.getConstructor();
             var instance = constructor.newInstance();
             System.out.println("after creation id = "+ instance.getId());
 
-            var field = exportedClass.getClass().getDeclaredField("id");
+            var field = instance.getClass().getDeclaredField("id");
             field.setAccessible(true);
             field.set(instance, 42);
             System.out.println("after modification id = "+ instance.getId());
