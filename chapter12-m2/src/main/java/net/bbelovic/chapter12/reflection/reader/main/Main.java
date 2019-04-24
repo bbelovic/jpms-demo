@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Main {
     public static void main(String[] args) {
-        exportsDoesNotSupportDeepReflection();
+        opensSupportsDeepReflection();
     }
 
     private static void opensSupportsDeepReflection() {
@@ -18,7 +18,8 @@ public class Main {
 
             Field id = instance.getClass().getDeclaredField("id");
             id.setAccessible(true);
-            id.set();
+            id.set(instance, 7);
+            System.out.println("instance of OpenedClass after modification: "+ instance);
 
 
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchFieldException e) {
