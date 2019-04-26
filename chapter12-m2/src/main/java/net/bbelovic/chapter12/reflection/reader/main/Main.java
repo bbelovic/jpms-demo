@@ -2,6 +2,7 @@ package net.bbelovic.chapter12.reflection.reader.main;
 
 import net.bbelovic.chapter12.exportedpkg.types.ExportedClass;
 
+import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
@@ -40,5 +41,10 @@ public class Main {
         } catch (NoSuchFieldException | IllegalAccessException | NoSuchMethodException | InstantiationException | InvocationTargetException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void varHandlesSupportDeepReflection() {
+        var exportedClass = new ExportedClass();
+        MethodHandles.Lookup lookup = MethodHandles.lookup();
     }
 }
