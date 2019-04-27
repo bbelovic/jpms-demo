@@ -13,4 +13,9 @@ public class ExportedClass {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return String.format("ExportedClass{id=%d}", id);
+    }
 }

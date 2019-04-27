@@ -1,6 +1,7 @@
 package net.bbelovic.chapter12.reflection.reader.main;
 
 import net.bbelovic.chapter12.exportedpkg.types.ExportedClass;
+import net.bbelovic.chapter12.impl.VarHandleServiceImpl;
 
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Field;
@@ -46,5 +47,7 @@ public class Main {
     private static void varHandlesSupportDeepReflection() {
         var exportedClass = new ExportedClass();
         MethodHandles.Lookup lookup = MethodHandles.lookup();
+        VarHandleServiceImpl service = new VarHandleServiceImpl();
+        service.execute(lookup, exportedClass);
     }
 }

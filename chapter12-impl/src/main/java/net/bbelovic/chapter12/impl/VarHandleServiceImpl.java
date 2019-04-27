@@ -9,8 +9,10 @@ public class VarHandleServiceImpl {
         try {
             var field = cls.getDeclaredField("id");
             VarHandle varHandle = lookup.unreflectVarHandle(field);
-            varHandle.get(o);
-            varHandle.getAndSet(o, 100L);
+            var value = varHandle.get(o);
+            System.out.println("Original value = " + value);
+            varHandle.set(o, 100L);
+            System.out.println("Object = " + o);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }
