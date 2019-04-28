@@ -9,7 +9,13 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Main {
     public static void main(String[] args) {
-        opensSupportsDeepReflection();
+        var opCode = args[0];
+        switch (opCode) {
+            case "opens": opensSupportsDeepReflection(); break;
+            case "varhandle": varHandlesSupportDeepReflection(); break;
+            case "exports": exportsDoesNotSupportDeepReflection(); break;
+            default: throw new IllegalArgumentException("Unsupported opcode: " + opCode);
+        }
     }
 
     private static void opensSupportsDeepReflection() {

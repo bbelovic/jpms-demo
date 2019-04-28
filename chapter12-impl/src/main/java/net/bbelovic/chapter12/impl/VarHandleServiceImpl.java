@@ -12,7 +12,7 @@ public class VarHandleServiceImpl {
             var value = varHandle.get(o);
             System.out.println("Original value = " + value);
             varHandle.set(o, 100L);
-            System.out.println("Object = " + o);
+            System.out.println("Object after modification = " + o);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }

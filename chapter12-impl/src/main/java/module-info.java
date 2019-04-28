@@ -1,3 +1,3 @@
-module chapter12.impl {
+module chapter.reflection.impl {
     exports net.bbelovic.chapter12.impl;
 }
