@@ -52,7 +52,13 @@ public class Main {
 
     private static void varHandlesSupportDeepReflection() {
         var exportedClass = new ExportedClass();
-        MethodHandles.Lookup lookup = MethodHandles.lookup();
+        MethodHandles.Lookup lookup =
+                null;
+        try {
+            lookup = MethodHandles.privateLookupIn(exportedClass.getClass(), MethodHandles.lookup());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
         VarHandleServiceImpl service = new VarHandleServiceImpl();
         service.execute(lookup, exportedClass);
     }
