@@ -15,6 +15,8 @@ public class Main {
             case "opens": opensSupportsDeepReflection(); break;
             case "varhandle": varHandlesSupportDeepReflection(); break;
             case "exports": exportsDoesNotSupportDeepReflection(); break;
+            case "exception" : dumpModuleVersionInStackTrace(); break;
+            case "rawversion": printModuleVersion(); break;
             default: throw new IllegalArgumentException("Unsupported opcode: " + opCode);
         }
     }
@@ -56,5 +58,16 @@ public class Main {
         MethodHandles.Lookup lookup = LookupProvider.getLookup();
         VarHandleServiceImpl service = new VarHandleServiceImpl(lookup);
         service.execute(exportedClass);
+    }
+
+    private static void dumpModuleVersionInStackTrace() {
+        throw new RuntimeException();
+    }
+
+    private static void printModuleVersion() {
+        var moduleDescriptor = Main.class.getModule().getDescriptor();
+        var rawVersionOptional = moduleDescriptor.rawVersion();
+        rawVersionOptional.ifPresentOrElse(rawVersion -> System.out.println("Raw version: "+ rawVersion),
+                () -> System.err.println("no raw version"));
     }
 }
