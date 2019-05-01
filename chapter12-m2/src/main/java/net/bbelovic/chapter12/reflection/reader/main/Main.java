@@ -1,6 +1,7 @@
 package net.bbelovic.chapter12.reflection.reader.main;
 
 import net.bbelovic.chapter12.exportedpkg.types.ExportedClass;
+import net.bbelovic.chapter12.exportedpkg.types.LookupProvider;
 import net.bbelovic.chapter12.impl.VarHandleServiceImpl;
 
 import java.lang.invoke.MethodHandles;
@@ -52,14 +53,8 @@ public class Main {
 
     private static void varHandlesSupportDeepReflection() {
         var exportedClass = new ExportedClass();
-        MethodHandles.Lookup lookup =
-                null;
-        try {
-            lookup = MethodHandles.privateLookupIn(exportedClass.getClass(), MethodHandles.lookup());
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        VarHandleServiceImpl service = new VarHandleServiceImpl();
-        service.execute(lookup, exportedClass);
+        MethodHandles.Lookup lookup = LookupProvider.getLookup();
+        VarHandleServiceImpl service = new VarHandleServiceImpl(lookup);
+        service.execute(exportedClass);
     }
 }
