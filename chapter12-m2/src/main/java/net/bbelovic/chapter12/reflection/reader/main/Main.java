@@ -5,8 +5,10 @@ import net.bbelovic.chapter12.exportedpkg.types.LookupProvider;
 import net.bbelovic.chapter12.impl.VarHandleServiceImpl;
 
 import java.lang.invoke.MethodHandles;
+import java.lang.module.ModuleDescriptor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
