@@ -1,4 +1,4 @@
-module chapter12.reflection.reader {
-    requires chapter12.reflection;
+module chapter.reflection.reader {
+    requires chapter.reflection;
     requires chapter.reflection.impl;
 }
